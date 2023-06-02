@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.danilingous.assets-for-other-runners": {
+      "version": "file:D:/MyPackages/com.danilingous.aseests-for-other-runners",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.danilingous.icerunner-models": {
       "version": "file:D:/MyPackages/com.danilingous.icerunner-models",
       "depth": 0,
