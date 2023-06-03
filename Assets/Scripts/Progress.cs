@@ -29,6 +29,7 @@ public class Progress : MonoBehaviour
     }
 
     public float GetPermomentSpeedBonus() => PlayerInfo.PermomentSpeedBonus;
+    public int GetCountCoins() => PlayerInfo.CountOfCoin;
     
 
 }
