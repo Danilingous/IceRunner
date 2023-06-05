@@ -17,4 +17,6 @@ public class PlayerForwardMove : MonoBehaviour
     {
         transform.position += new Vector3(0, 0, _currentSpeed * Time.deltaTime);
     }
+
+    public float GetCurrentSpeed() => _currentSpeed;
 }

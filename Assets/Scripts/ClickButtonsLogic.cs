@@ -6,6 +6,7 @@ public class ClickButtonsLogic : MonoBehaviour
     [SerializeField] private PlayerForwardMove _playerForwardMove;
     [SerializeField] private PlayerAnimation _playerAnimation;
     [SerializeField] private CanvasesManager _canvasesManager;
+    [SerializeField] private Sceneloader _sceneloader;
     
 
   
@@ -16,4 +17,9 @@ public class ClickButtonsLogic : MonoBehaviour
         _playerTurning.enabled = true;
         _playerAnimation.StartRunAnimation();
     }
+
+    public void ClickAgainLevelButton() => _sceneloader.LoadLevelAgain();
+
+    public void ClickNextLevelButton() => _sceneloader.LoadNextLevel();
+
 }

@@ -5,6 +5,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] GameObject _deathEffectCrashPrefab;
+    [SerializeField] GameObject _WinSoundPrefab;
     [SerializeField] private CanvasesManager _canvasesManager;
 
 
@@ -24,6 +25,14 @@ public class PlayerAnimation : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         _canvasesManager.OnEndGameLoseCanvas();
         Destroy(gameObject);
+    }
+
+    public IEnumerator CoroutinFinishLine()
+    {
+        Instantiate(_WinSoundPrefab,transform.position,transform.rotation);
+        _animator.SetBool("Victory", true);
+        yield return new WaitForSeconds(2);
+        _canvasesManager.OnEndGameWinCanvas();
 
     }
 }
